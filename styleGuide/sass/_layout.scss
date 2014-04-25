@@ -5,9 +5,16 @@
 }
 
 .page-wrap {
-  max-width: 90%;
+  // max-width: 90%;
   margin: auto;
+  //@include outer-container;
+
+
+
 }
+
+
+
 
 header,
 footer {
@@ -68,4 +75,34 @@ footer {
   font-family: Oswald;
   text-align: center;
   text-transform:uppercase;
+}
+
+.outer {
+background-color: teal;
+@include outer-container;
+//@include clearfix;
+padding: 2em;
+}
+
+.test {
+  background: salmon;
+  color: #FFF;
+  @include span-columns(4)
+}
+
+.test {
+  @include media($mobile)
+  { // As defined in _grid-settings.scss
+    @include span-columns(6);
+    margin-bottom: 1em;
+    background-color: red;
+        & h2 {
+          color: white;
+          text-align: center;
+          line-height: 3.5em;
+          padding: 0;
+          margin: 0;
+
+        }
+  }
 }

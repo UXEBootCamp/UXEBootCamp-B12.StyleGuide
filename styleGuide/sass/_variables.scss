@@ -39,3 +39,8 @@ $font-body: 'helvetica';
 $swatchColors: $dark-blue, $light-blue, $dark-red, $light-red, $cream, $white, $brown, $charcoal ;
 
 $swatchNames: dark-blue, light-blue, dark-red, light-red, cream, white, brown, charcoal ;
+
+
+// Neat mobile testing:
+
+$mobile: new-breakpoint(max-width 500px 6);

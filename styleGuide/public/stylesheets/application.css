@@ -1,6 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,400,700,600,800);
 @import url(http://fonts.googleapis.com/css?family=Domine:400,700);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   background: #ffffff;
   font-size: 1rem; }
@@ -160,9 +165,6 @@ code {
   font-family: helvetica;
   background-color: $charcoal; }
 
-section {
-  width: 90%;
-  background-color: #ffffff; }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -203,7 +205,6 @@ table {
   box-sizing: border-box; }
 
 .page-wrap {
-  max-width: 90%;
   margin: auto; }
 
 header, footer {
@@ -257,5 +258,43 @@ footer {
   font-family: Oswald;
   text-align: center;
   text-transform: uppercase; }
+
+.outer {
+  background-color: teal;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em; }
+  .outer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.test {
+  background: salmon;
+  color: #FFF;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .test:last-child {
+    margin-right: 0; }
+
+@media screen and (max-width: 500px)  {
+  .test {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: red; }
+    .test:last-child {
+      margin-right: 0; }
+    .test h2 {
+      color: white;
+      text-align: center;
+      line-height: 3.5em;
+      padding: 0;
+      margin: 0; } }
 
 /*# sourceMappingURL=application.css.map */

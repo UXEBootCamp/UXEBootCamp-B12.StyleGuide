@@ -2,15 +2,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     sass: {
       dist: {
+        options: {
+          // includePaths: require('node-bourbon').with('other/path', 'another/path')
+          // - or -
+          sourceComments: "map",
+          includePaths: require('node-neat').with('./node_modules/node-neat')
+        },
         files: {
           'public/stylesheets/application.css': 'sass/application.scss'
-        },
-        options: {
-          sourceComments: "map",
-          includePaths: [
-            './bower_components/bower-bourbon'
-
-          ]
         }
       }
     },
